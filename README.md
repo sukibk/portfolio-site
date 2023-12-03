@@ -26,33 +26,24 @@ This is my personal portfolio website built with Next.js, TypeScript, Tailwind C
 
 Make sure you have Node.js and npm installed on your machine.
 
-```bash
+
 # Install dependencies
 npm install
-Save to grepper
-Development
-bash
-Copy code
+
 # Run the development server
 npm run dev
-Save to grepper
 Visit http://localhost:3000 to view your portfolio locally.
 
 Build
-bash
-Copy code
 # Build for production
 npm run build
-Save to grepper
+
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Acknowledgments
 Special thanks to the creators of TypeScript, Tailwind CSS, Three.js, and Next.js for providing amazing tools and libraries.
+
 Contact
-Feel free to reach out to me at your@email.com for any questions or feedback.
+Feel free to reach out to me at mjsudar21@catawba.edu for any questions or feedback.
 
-css
-Copy code
-
-Make sure to update the badges, links, and any other relevant information to match your pr
