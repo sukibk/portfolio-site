@@ -32,9 +32,10 @@ npm install
 
 # Run the development server
 npm run dev
+
 Visit http://localhost:3000 to view your portfolio locally.
 
-Build
+
 # Build for production
 npm run build
 
