@@ -28,16 +28,16 @@ Make sure you have Node.js and npm installed on your machine.
 
 
 # Install dependencies
-npm install
+```npm install```
 
 # Run the development server
-npm run dev
+```npm run dev```
 
 Visit http://localhost:3000 to view your portfolio locally.
 
 
 # Build for production
-npm run build
+```npm run build```
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
