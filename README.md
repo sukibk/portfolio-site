@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/language-TypeScript-blue.svg)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/style-Tailwind%20CSS-blueviolet.svg)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/graphics-Three.js-green.svg)](https://threejs.org/)
+[![Next.js](https://img.shields.io/badge/framework-Next.js-orange.svg)](https://nextjs.org/)
+
+## Description
+
+This is my personal portfolio website built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Three.js. It showcases my projects, skills, and provides a glimpse into my journey as a developer.
+
+## Features
+
+- **TypeScript:** The project is written in TypeScript, providing a statically-typed and more maintainable codebase.
+
+- **Tailwind CSS:** Styling is done using Tailwind CSS, a utility-first CSS framework that makes it easy to design responsive and visually appealing user interfaces.
+
+- **Three.js:** The graphics and interactive elements are powered by Three.js, a cross-browser JavaScript library and application programming interface (API) used to create and display animated 3D computer graphics.
+
+- **Next.js:** The website is built on the Next.js framework, providing server-side rendering, automatic code splitting, and a great development experience.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
 
 ```bash
+# Install dependencies
+npm install
+Save to grepper
+Development
+bash
+Copy code
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Save to grepper
+Visit http://localhost:3000 to view your portfolio locally.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build
+bash
+Copy code
+# Build for production
+npm run build
+Save to grepper
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Acknowledgments
+Special thanks to the creators of TypeScript, Tailwind CSS, Three.js, and Next.js for providing amazing tools and libraries.
+Contact
+Feel free to reach out to me at your@email.com for any questions or feedback.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+css
+Copy code
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Make sure to update the badges, links, and any other relevant information to match your pr
