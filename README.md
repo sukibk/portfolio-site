@@ -33,7 +33,7 @@ Make sure you have Node.js and npm installed on your machine.
 # Run the development server
 ```npm run dev```
 
-Visit http://localhost:3000 to view your portfolio locally.
+Visit http://localhost:3000 to view my portfolio locally.
 
 
 # Build for production
