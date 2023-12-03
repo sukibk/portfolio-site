@@ -39,12 +39,12 @@ Visit http://localhost:3000 to view your portfolio locally.
 # Build for production
 ```npm run build```
 
-License
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
+# Acknowledgments
 Special thanks to the creators of TypeScript, Tailwind CSS, Three.js, and Next.js for providing amazing tools and libraries.
 
-Contact
+# Contact
 Feel free to reach out to me at mjsudar21@catawba.edu for any questions or feedback.
 
