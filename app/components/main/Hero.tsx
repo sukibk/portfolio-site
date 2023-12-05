@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative flex flex-col h-full w-full">
       <video
         autoPlay
-        muted
+        muted={true}
         loop
         className="rotate-180 absolute top-[-340px] left-0 z-[-2] w-full h-full object-cover opacity-80"
       >
