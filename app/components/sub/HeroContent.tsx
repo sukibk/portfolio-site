@@ -15,9 +15,9 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-20 w-full z-[21]"
+      className="flex flex-col items-center justify-center px-20 mt-20 w-full h-full z-[21] md:flex-row"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center items-center m-auto text-center md:text-start md:items-start">
         <motion.div
           variants={slideInFromTop}
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
@@ -49,7 +49,7 @@ const HeroContent = () => {
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="py-2 button-primary text-center p-[1rem] text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           Contact Me
         </motion.a>
@@ -57,7 +57,7 @@ const HeroContent = () => {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="hidden w-full h-full flex justify-center items-center md:inline-block"
       >
         <Image
           src="/mainIconsdark.svg"
