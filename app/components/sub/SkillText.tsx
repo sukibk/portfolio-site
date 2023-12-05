@@ -25,7 +25,7 @@ const SkillText = () => {
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="w-full h-auto flex flex-col gap-8 items-center justify-center pt-[10px] z-[20]"
+      className="w-3/4 h-auto flex flex-col gap-8 items-center justify-center pt-[10px] z-[20]"
     >
       <motion.div
         variants={slideInFromTop(0)}
