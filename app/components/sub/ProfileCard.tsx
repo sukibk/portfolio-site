@@ -4,7 +4,6 @@ import React from "react";
 interface Props {
   src: string;
   title: string;
-  description: string;
 }
 
 const ProfileCard = ({ src, title }: Props) => {
