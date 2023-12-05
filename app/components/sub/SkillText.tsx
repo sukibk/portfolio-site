@@ -11,10 +11,7 @@ import { motion } from "framer-motion";
 
 const SkillText = () => {
   return (
-    <div
-      className="w-full h-auto flex flex-col gap-8 items-center justify-center pt-[10px] z-[20]"
-      style={{ transform: "scale(1.2)" }}
-    >
+    <div className="w-full h-auto flex flex-col gap-8 items-center justify-center pt-[10px] z-[20]">
       <motion.div
         variants={slideInFromTop}
         className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] mb-[10px]"

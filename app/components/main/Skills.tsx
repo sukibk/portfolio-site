@@ -1,5 +1,7 @@
 "use client";
 
+// Fix the code duplication
+
 import React, { useEffect, useState } from "react";
 import SkillDataProvider from "@/app/components/sub/SkillDataProvider";
 import {
@@ -47,97 +49,98 @@ const Skills = () => {
 
   return (
     <section
-      className="flex flex-col items-center justify-center gap-20 h-full relative overflow-hidden py-2 md:gap-3"
-      style={{ transform: "scale(0.8)" }}
+      className="flex flex-col items-center justify-center gap-10 h-full relative overflow-hidden py-2 md:gap-3"
       id="skills"
     >
       <SkillText />
-      <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Frontend_skill.map((image, index) => {
-          if (typeof windowSize.width !== "undefined") {
-            if (windowSize.width <= 500) {
-              if (image.mobile_view) {
+      <div className="z-[1] scale-75 lg:scale-100">
+        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+          {Frontend_skill.map((image, index) => {
+            if (typeof windowSize.width !== "undefined") {
+              if (windowSize.width <= 500) {
+                if (image.mobile_view) {
+                  return (
+                    <SkillDataProvider
+                      key={image.mobile_index}
+                      src={image.Image}
+                      width={image.width}
+                      height={image.height}
+                      index={image.mobile_index}
+                    />
+                  );
+                }
+              } else if (windowSize.width > 500) {
                 return (
                   <SkillDataProvider
-                    key={image.mobile_index}
+                    key={index}
                     src={image.Image}
                     width={image.width}
                     height={image.height}
-                    index={image.mobile_index}
+                    index={index}
                   />
                 );
               }
-            } else if (windowSize.width > 500) {
-              return (
-                <SkillDataProvider
-                  key={index}
-                  src={image.Image}
-                  width={image.width}
-                  height={image.height}
-                  index={index}
-                />
-              );
             }
-          }
-        })}
-      </div>
-      <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
-        {Backend_skill.map((image, index) => {
-          if (typeof windowSize.width !== "undefined") {
-            if (windowSize.width <= 500) {
-              if (image.mobile_view) {
+          })}
+        </div>
+        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
+          {Backend_skill.map((image, index) => {
+            if (typeof windowSize.width !== "undefined") {
+              if (windowSize.width <= 500) {
+                if (image.mobile_view) {
+                  return (
+                    <SkillDataProvider
+                      key={image.mobile_index}
+                      src={image.Image}
+                      width={image.width}
+                      height={image.height}
+                      index={image.mobile_index}
+                    />
+                  );
+                }
+              } else if (windowSize.width > 500) {
                 return (
                   <SkillDataProvider
-                    key={image.mobile_index}
+                    key={index}
                     src={image.Image}
                     width={image.width}
                     height={image.height}
-                    index={image.mobile_index}
+                    index={index}
                   />
                 );
               }
-            } else if (windowSize.width > 500) {
-              return (
-                <SkillDataProvider
-                  key={index}
-                  src={image.Image}
-                  width={image.width}
-                  height={image.height}
-                  index={index}
-                />
-              );
             }
-          }
-        })}
-      </div>
-      <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
-        {Full_stack.map((image, index) => {
-          if (typeof windowSize.width !== "undefined") {
-            if (windowSize.width <= 500) {
-              if (image.mobile_view) {
+          })}
+        </div>
+        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
+          {Full_stack.map((image, index) => {
+            if (typeof windowSize.width !== "undefined") {
+              if (windowSize.width <= 500) {
+                if (image.mobile_view) {
+                  return (
+                    <SkillDataProvider
+                      key={image.mobile_index}
+                      src={image.Image}
+                      width={image.width}
+                      height={image.height}
+                      index={image.mobile_index}
+                    />
+                  );
+                }
+              } else if (windowSize.width > 500) {
                 return (
                   <SkillDataProvider
-                    key={image.mobile_index}
+                    key={index}
                     src={image.Image}
                     width={image.width}
                     height={image.height}
-                    index={image.mobile_index}
+                    index={index}
                   />
                 );
               }
-            } else if (windowSize.width > 500) {
-              return (
-                <SkillDataProvider
-                  key={index}
-                  src={image.Image}
-                  width={image.width}
-                  height={image.height}
-                  index={index}
-                />
-              );
             }
-          }
-        })}
+          })}
+        </div>
       </div>
       {/*<div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-5 items-center">*/}
       {/*  {Other_skill.map((image, index) => (*/}
