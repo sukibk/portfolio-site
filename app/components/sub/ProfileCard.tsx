@@ -7,7 +7,7 @@ interface Props {
   description: string;
 }
 
-const ProfileCard = ({ src, title, description }: Props) => {
+const ProfileCard = ({ src, title }: Props) => {
   return (
     <div className="relative overflow-hidden rounded-lg shadow-lg w-full">
       <Image
