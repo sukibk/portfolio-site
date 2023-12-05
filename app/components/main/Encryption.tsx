@@ -28,7 +28,7 @@ const Encryption = () => {
         </div>
         <div className="relative z-[20] bottom-[10px] px-[5px]">
           <div className="text-[20px] font-medium text-center text-gray-300">
-            I secure your customer's data with{" "}
+            I secure your customer&apos;s data with{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               end to end{" "}
