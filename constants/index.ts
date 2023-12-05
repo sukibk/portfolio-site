@@ -157,7 +157,7 @@ export const Frontend_skill = [
     width: 80,
     height: 80,
     mobile_view: false,
-    mobile_index: 0,
+    mobile_index: 4,
   },
   {
     skill_name: "Type Script",
@@ -184,7 +184,7 @@ export const Backend_skill = [
     width: 80,
     height: 80,
     mobile_view: true,
-    mobile_index: 5,
+    mobile_index: 2,
   },
   {
     skill_name: "Express js",
@@ -192,7 +192,7 @@ export const Backend_skill = [
     width: 80,
     height: 80,
     mobile_view: true,
-    mobile_index: 6,
+    mobile_index: 3,
   },
   {
     skill_name: "Mongo db",
@@ -200,7 +200,7 @@ export const Backend_skill = [
     width: 40,
     height: 40,
     mobile_view: true,
-    mobile_index: 7,
+    mobile_index: 4,
   },
   {
     skill_name: "Fire base",
@@ -208,7 +208,7 @@ export const Backend_skill = [
     width: 55,
     height: 55,
     mobile_view: true,
-    mobile_index: 8,
+    mobile_index: 5,
   },
   {
     skill_name: "Postger SQL",
@@ -251,7 +251,7 @@ export const Full_stack = [
     width: 70,
     height: 70,
     mobile_view: true,
-    mobile_index: 9,
+    mobile_index: 3,
   },
   {
     skill_name: "Tauri",
@@ -259,7 +259,7 @@ export const Full_stack = [
     width: 70,
     height: 70,
     mobile_view: true,
-    mobile_index: 10,
+    mobile_index: 4,
   },
   {
     skill_name: "Docker",
@@ -267,7 +267,7 @@ export const Full_stack = [
     width: 70,
     height: 70,
     mobile_view: true,
-    mobile_index: 11,
+    mobile_index: 5,
   },
 
   {
@@ -276,7 +276,7 @@ export const Full_stack = [
     width: 50,
     height: 50,
     mobile_view: true,
-    mobile_index: 12,
+    mobile_index: 6,
   },
 ];
 

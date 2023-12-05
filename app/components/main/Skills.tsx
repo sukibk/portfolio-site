@@ -11,7 +11,7 @@ import {
   Other_skill,
 } from "@/constants";
 import SkillText from "@/app/components/sub/SkillText";
-import { number } from "prop-types";
+import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
   // Initialize state with undefined width/height so server and client renders match

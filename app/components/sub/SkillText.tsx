@@ -8,10 +8,25 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const SkillText = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once when user sees component
+  });
+
+  const imageVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <div className="w-full h-auto flex flex-col gap-8 items-center justify-center pt-[10px] z-[20]">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      className="w-full h-auto flex flex-col gap-8 items-center justify-center pt-[10px] z-[20]"
+    >
       <motion.div
         variants={slideInFromTop}
         className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] mb-[10px]"
@@ -31,7 +46,7 @@ const SkillText = () => {
         </span>{" "}
         technologies
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
