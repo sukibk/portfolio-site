@@ -54,7 +54,7 @@ const Skills = () => {
       <SkillText />
       <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Frontend_skill.map((image, index) => {
-          if (typeof window !== "undefined") {
+          if (typeof windowSize.width !== "undefined") {
             if (windowSize.width <= 500) {
               if (image.mobile_view) {
                 return (
@@ -83,7 +83,7 @@ const Skills = () => {
       </div>
       <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
         {Backend_skill.map((image, index) => {
-          if (typeof window !== "undefined") {
+          if (typeof windowSize.width !== "undefined") {
             if (windowSize.width <= 500) {
               if (image.mobile_view) {
                 return (
@@ -112,7 +112,7 @@ const Skills = () => {
       </div>
       <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
         {Full_stack.map((image, index) => {
-          if (typeof window !== "undefined") {
+          if (typeof windowSize.width !== "undefined") {
             if (windowSize.width <= 500) {
               if (image.mobile_view) {
                 return (
