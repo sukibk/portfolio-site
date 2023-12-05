@@ -49,12 +49,12 @@ const Skills = () => {
 
   return (
     <section
-      className="flex flex-col items-center justify-center gap-10 h-full relative overflow-hidden py-2 md:gap-3"
+      className="flex flex-col items-center justify-center h-full relative overflow-hidden py-2 md:gap-3"
       id="skills"
     >
       <SkillText />
-      <div className="z-[1] scale-75 lg:scale-100">
-        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+      <div className="z-[1] scale-75 flex flex-col gap-7 lg:scale-100">
+        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-8 items-center">
           {Frontend_skill.map((image, index) => {
             if (typeof windowSize.width !== "undefined") {
               if (windowSize.width <= 500) {
@@ -83,7 +83,7 @@ const Skills = () => {
             }
           })}
         </div>
-        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
+        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-11 items-center">
           {Backend_skill.map((image, index) => {
             if (typeof windowSize.width !== "undefined") {
               if (windowSize.width <= 500) {
@@ -112,7 +112,7 @@ const Skills = () => {
             }
           })}
         </div>
-        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
+        <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-11 items-center">
           {Full_stack.map((image, index) => {
             if (typeof windowSize.width !== "undefined") {
               if (windowSize.width <= 500) {
