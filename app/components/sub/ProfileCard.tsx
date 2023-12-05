@@ -20,7 +20,7 @@ const ProfileCard = ({ src, title }: Props) => {
 
       <div className="relative p-4 text-center">
         <p className="text-lg text-gray-400 my-5 max-w-[600px] text-left">
-          Hello, I&apos;m Marko Sudar, a seasoned web developer with a rich
+          Hello, I&apos;m Marko Sudar, an experienced web developer with a rich
           background in major tech corporations such as Oracle and Microsoft.{" "}
           {<br />}
           {<br />}
