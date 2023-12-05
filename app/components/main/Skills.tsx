@@ -54,82 +54,88 @@ const Skills = () => {
       <SkillText />
       <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Frontend_skill.map((image, index) => {
-          if (windowSize.width <= 500) {
-            if (image.mobile_view) {
+          if (typeof window !== "undefined") {
+            if (windowSize.width <= 500) {
+              if (image.mobile_view) {
+                return (
+                  <SkillDataProvider
+                    key={image.mobile_index}
+                    src={image.Image}
+                    width={image.width}
+                    height={image.height}
+                    index={image.mobile_index}
+                  />
+                );
+              }
+            } else if (windowSize.width > 500) {
               return (
                 <SkillDataProvider
-                  key={image.mobile_index}
+                  key={index}
                   src={image.Image}
                   width={image.width}
                   height={image.height}
-                  index={image.mobile_index}
+                  index={index}
                 />
               );
             }
-          } else if (windowSize.width > 500) {
-            return (
-              <SkillDataProvider
-                key={index}
-                src={image.Image}
-                width={image.width}
-                height={image.height}
-                index={index}
-              />
-            );
           }
         })}
       </div>
       <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
         {Backend_skill.map((image, index) => {
-          if (windowSize.width <= 500) {
-            if (image.mobile_view) {
+          if (typeof window !== "undefined") {
+            if (windowSize.width <= 500) {
+              if (image.mobile_view) {
+                return (
+                  <SkillDataProvider
+                    key={image.mobile_index}
+                    src={image.Image}
+                    width={image.width}
+                    height={image.height}
+                    index={image.mobile_index}
+                  />
+                );
+              }
+            } else if (windowSize.width > 500) {
               return (
                 <SkillDataProvider
-                  key={image.mobile_index}
+                  key={index}
                   src={image.Image}
                   width={image.width}
                   height={image.height}
-                  index={image.mobile_index}
+                  index={index}
                 />
               );
             }
-          } else if (windowSize.width > 500) {
-            return (
-              <SkillDataProvider
-                key={index}
-                src={image.Image}
-                width={image.width}
-                height={image.height}
-                index={index}
-              />
-            );
           }
         })}
       </div>
       <div className="flex z-[1] flex-row justify-around flex-wrap mt-4 gap-9 items-center">
         {Full_stack.map((image, index) => {
-          if (windowSize.width <= 500) {
-            if (image.mobile_view) {
+          if (typeof window !== "undefined") {
+            if (windowSize.width <= 500) {
+              if (image.mobile_view) {
+                return (
+                  <SkillDataProvider
+                    key={image.mobile_index}
+                    src={image.Image}
+                    width={image.width}
+                    height={image.height}
+                    index={image.mobile_index}
+                  />
+                );
+              }
+            } else if (windowSize.width > 500) {
               return (
                 <SkillDataProvider
-                  key={image.mobile_index}
+                  key={index}
                   src={image.Image}
                   width={image.width}
                   height={image.height}
-                  index={image.mobile_index}
+                  index={index}
                 />
               );
             }
-          } else if (windowSize.width > 500) {
-            return (
-              <SkillDataProvider
-                key={index}
-                src={image.Image}
-                width={image.width}
-                height={image.height}
-                index={index}
-              />
-            );
           }
         })}
       </div>
