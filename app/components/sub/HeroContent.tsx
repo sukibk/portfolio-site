@@ -45,7 +45,7 @@ const HeroContent = () => {
         >
           My name is Marko Sudar. I&apos;m a Full Stack Software Engineer with
           experience in Web App and Software development. Check out my projects
-          and skills and feel free to reach out.
+          and feel free to reach out.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
