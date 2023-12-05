@@ -17,7 +17,7 @@ const HeroContent = () => {
       animate="visible"
       className="flex flex-col items-center justify-center px-20 mt-20 w-full h-full z-[21] md:flex-row"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center items-center m-auto text-center md:text-start md:items-start">
+      <div className="h-full w-full flex flex-col gap-7 justify-center items-center m-auto text-center md:text-start md:items-start">
         <motion.div
           variants={slideInFromTop}
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
@@ -43,9 +43,9 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          Hi my name is Marko Sudar. I&apos;m a Full Stack Software Engineer
-          with experience in Web App and Software development. Check out my
-          projects and skills and feel free to reach out.
+          My name is Marko Sudar. I&apos;m a Full Stack Software Engineer with
+          experience in Web App and Software development. Check out my projects
+          and skills and feel free to reach out.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
