@@ -8,7 +8,7 @@ import ProfileCard from "@/app/components/sub/ProfileCard";
 
 const Encryption = () => {
   return (
-    <div className="w-full h-[145dvh] flex flex-col items-center" id="about-me">
+    <div className="w-full h-[145vh] flex flex-col items-center" id="about-me">
       <div className="w-3/4 h-full flex flex-col gap-10">
         <div className="z-[5]">
           <motion.div
