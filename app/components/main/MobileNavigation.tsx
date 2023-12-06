@@ -6,7 +6,7 @@ import { Socials } from "@/constants";
 const MobileNavigation = () => {
   return (
     <>
-      <div className="absolute h-[200px] w-[200px] top-[30px] right-[30px]">
+      <div className="absolute h-[70px] w-[70px] top-[30px] right-[30px]">
         <Image
           className="absolute right-[0px] cursor-pointer rotate-45 hover:rotate-90 transition-all "
           src="/NavbarClose.png"
