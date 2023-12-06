@@ -8,7 +8,7 @@ interface Props {
 
 const ProfileCard = ({ src, title }: Props) => {
   return (
-    <div className="relative w-full flex flex-col mb-[2rem]">
+    <div className="relative w-full flex flex-col items-end mb-[2rem]">
       <Image
         src={src}
         alt={title}
@@ -30,7 +30,7 @@ const ProfileCard = ({ src, title }: Props) => {
         </p>
       </div>
       <div>
-        <a className="relative ml-[10rem] button-primary text-center p-[1rem] text-white cursor-pointer rounded-lg ">
+        <a className="relative mr-5 button-primary text-center p-[1rem] text-white cursor-pointer rounded-lg ">
           Download my CV
         </a>
       </div>
