@@ -8,7 +8,7 @@ interface Props {
 
 const ProfileCard = ({ src, title }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg w-full">
+    <div className="relative w-full flex flex-col mb-[2rem]">
       <Image
         src={src}
         alt={title}
@@ -16,7 +16,6 @@ const ProfileCard = ({ src, title }: Props) => {
         height={1000}
         className="w-2/4 h-2/4 object-contain my-0 mx-auto  rounded-3xl overflow-hidden shadow-3xl"
       />
-
       <div className="relative p-4 text-center">
         <p className="text-lg text-gray-400 my-5 max-w-[600px] text-left">
           Hello, I&apos;m Marko Sudar, an experienced web developer with a rich
@@ -29,6 +28,11 @@ const ProfileCard = ({ src, title }: Props) => {
           on the cloud. {<br />}
           {<br />}
         </p>
+      </div>
+      <div>
+        <a className="relative ml-[10rem] button-primary text-center p-[1rem] text-white cursor-pointer rounded-lg ">
+          Download my CV
+        </a>
       </div>
     </div>
   );
