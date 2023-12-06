@@ -50,7 +50,7 @@ const Skills = () => {
   return (
     <section
       className="flex flex-col items-center justify-center h-full relative overflow-hidden py-2 md:gap-3"
-      id="skills"
+      id="technologies"
     >
       <SkillText />
       <div className="z-[1] scale-75 flex flex-col gap-7 lg:scale-100">
