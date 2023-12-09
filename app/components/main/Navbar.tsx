@@ -1,14 +1,15 @@
+"use client";
 import { Socials } from "@/constants";
 import Image from "next/image";
-import React from "react";
-import MobileNavigation from "@/app/components/main/MobileNavigation";
+import React, { useState } from "react";
+import MobileNavigation from "@/app/components/sub/MobileNavigation";
+import DesktopNavigation from "@/app/components/sub/DesktopNavigation";
+import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 
 const Navbar = () => {
-  return (
-    <div className="w-full h-full fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
-      <MobileNavigation />;
-    </div>
-  );
+  const navbarExpanded = useAppSelector((store) => store.navbar.expanded);
+
+  return <MobileNavigation></MobileNavigation>;
 };
 
 // height was 65px
