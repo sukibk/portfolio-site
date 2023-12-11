@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <>
       {(() => {
-        if (typeof windowSize !== "undefined") {
+        if (typeof windowSize.width !== "undefined") {
           if (windowSize.width <= 700) {
             return <MobileNavigation />;
           } else return <DesktopNavigation />;
