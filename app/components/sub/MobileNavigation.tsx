@@ -178,7 +178,7 @@ const MobileNavigation = () => {
                 style={{ pointerEvents: navbarExpanded ? "auto" : "none" }}
               >
                 {Socials.map((social) => (
-                  <motion.li variants={itemVariants}>
+                  <motion.li key={social.src} variants={itemVariants}>
                     <Image
                       className="cursor-pointer transition-all hover:scale-[1.3]"
                       src={social.src}
