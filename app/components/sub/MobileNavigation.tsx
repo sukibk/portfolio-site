@@ -6,6 +6,20 @@ import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 import { toggle } from "@/lib/navbar/navbarSlice";
 import DesktopNavigation from "@/app/components/sub/DesktopNavigation";
 import styles from "./MobileNavigation.module.css";
+import { motion, Variants } from "framer-motion";
+
+const itemVariants: Variants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 },
+  },
+  closed: {
+    opacity: 0,
+    y: 20,
+    transition: { duration: 0.3 },
+  },
+};
 
 const MobileNavigation = () => {
   const navbarExpanded = useAppSelector((store) => store.navbar.expanded);
@@ -60,7 +74,7 @@ const MobileNavigation = () => {
           </div>
           <div
             className={`overflow-visible p-[15px] inline-block cursor-pointer transition-opacity border-none hover:opacity-[0.7]
-              ${navbarExpanded ? "self-end justify-self-end" : ""}\
+              ${navbarExpanded ? "self-end" : ""}\
             `}
           >
             <div
@@ -85,40 +99,98 @@ const MobileNavigation = () => {
               navbarExpanded ? "" : "hidden"
             }`}
           >
-            <div className="h-[50vh]">
-              <div className="flex flex-col h-full justify-between text-[40px] font-bold text-gray-200 mt-[1rem]">
-                <a
-                  href="#technologies"
-                  className="cursor-pointer transition-all duration-[0.4s] hover:text-[60px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
-                >
-                  Technologies
-                </a>
-                <a
-                  href="#about-me"
-                  className="cursor-pointer transition-all duration-[0.4s] hover:text-[60px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
-                >
-                  About me
-                </a>
-                <a
-                  href="#projects"
-                  className="cursor-pointer transition-all duration-[0.4s] hover:text-[60px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
-                >
-                  Projects
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-row gap-5">
-              {Socials.map((social) => (
-                <Image
-                  className="cursor-pointer transition-all hover:scale-[1.3]"
-                  src={social.src}
-                  alt={social.name}
-                  key={social.name}
-                  width={35}
-                  height={35}
-                />
-              ))}
-            </div>
+            <motion.nav
+              className="h-[70vh] flex flex-col gap-10"
+              initial={false}
+              animate={navbarExpanded ? "open" : "closed"}
+            >
+              <motion.ul
+                variants={{
+                  open: {
+                    clipPath: "inset(0% 0% 0% 0% round 10px)",
+                    transition: {
+                      type: "spring",
+                      bounce: 0,
+                      duration: 0.7,
+                      delayChildren: 0.3,
+                      staggerChildren: 0.15,
+                    },
+                  },
+                  closed: {
+                    clipPath: "inset(10% 50% 90% 50% round 10px)",
+                    transition: {
+                      type: "spring",
+                      bounce: 0,
+                      duration: 0.3,
+                    },
+                  },
+                }}
+                style={{ pointerEvents: navbarExpanded ? "auto" : "none" }}
+                className="flex flex-col h-full gap-20 text-[40px] font-bold text-gray-200 mt-[1rem]"
+              >
+                <motion.li variants={itemVariants}>
+                  <a
+                    href="#technologies"
+                    className="cursor-pointer transition-all duration-[0.4s] hover:text-[50px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
+                  >
+                    Technologies
+                  </a>
+                </motion.li>
+                <motion.li variants={itemVariants}>
+                  <a
+                    href="#about-me"
+                    className="cursor-pointer transition-all duration-[0.4s] hover:text-[50px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
+                  >
+                    About me
+                  </a>
+                </motion.li>
+                <motion.li variants={itemVariants}>
+                  <a
+                    href="#projects"
+                    className="cursor-pointer transition-all duration-[0.4s] hover:text-[50px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
+                  >
+                    Projects
+                  </a>
+                </motion.li>
+              </motion.ul>
+              <motion.ul
+                className="flex flex-row gap-5"
+                variants={{
+                  open: {
+                    clipPath: "inset(0% 0% 0% 0% round 10px)",
+                    transition: {
+                      type: "spring",
+                      bounce: 0,
+                      duration: 0.7,
+                      delayChildren: 0.7,
+                      staggerChildren: 0.05,
+                    },
+                  },
+                  closed: {
+                    clipPath: "inset(10% 50% 90% 50% round 10px)",
+                    transition: {
+                      type: "spring",
+                      bounce: 0,
+                      duration: 0.3,
+                    },
+                  },
+                }}
+                style={{ pointerEvents: navbarExpanded ? "auto" : "none" }}
+              >
+                {Socials.map((social) => (
+                  <motion.li variants={itemVariants}>
+                    <Image
+                      className="cursor-pointer transition-all hover:scale-[1.3]"
+                      src={social.src}
+                      alt={social.name}
+                      key={social.name}
+                      width={35}
+                      height={35}
+                    />
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.nav>
           </div>
         </div>
 

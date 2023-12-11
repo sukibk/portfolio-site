@@ -9,9 +9,11 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10 py-10">
         <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/black_lake_retreat.png"
+          title="Web Site For Wedding Venue"
+          description="Black Lake Retreat Center is small business in Asheboro, North Carolina. In collaboration with other
+          developer I have built web site from ground up and integrated application for online reservation. We used low
+          -code platform - Weebly, as well as low-code forms application Jotform"
         />
         <ProjectCard
           src="/CardImage.png"
