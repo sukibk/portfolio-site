@@ -23,20 +23,20 @@ const MobileNavigation = () => {
         } fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10 transition-all`}
       >
         {/**/}
-        <div
-          className={`absolute h-[70px] w-[70px] top-[30px] right-[30px] ${
-            navbarExpanded ? "" : "hidden"
-          }`}
-        >
-          <Image
-            className="absolute right-[0px] cursor-pointer rotate-45 hover:rotate-90 transition-all "
-            src="/NavbarClose.png"
-            alt="Mobile Navigation Close"
-            width={30}
-            height={30}
-            onClick={toggleNavbar}
-          />
-        </div>
+        {/*<div*/}
+        {/*  className={`absolute h-[70px] w-[70px] top-[30px] right-[30px] ${*/}
+        {/*    navbarExpanded ? "" : "hidden"*/}
+        {/*  }`}*/}
+        {/*>*/}
+        {/*  <Image*/}
+        {/*    className="absolute right-[0px] cursor-pointer rotate-45 hover:rotate-90 transition-all "*/}
+        {/*    src="/NavbarClose.png"*/}
+        {/*    alt="Mobile Navigation Close"*/}
+        {/*    width={30}*/}
+        {/*    height={30}*/}
+        {/*    onClick={toggleNavbar}*/}
+        {/*  />*/}
+        {/*</div>*/}
         <div
           className={`h-full w-full flex ${
             navbarExpanded
@@ -60,7 +60,7 @@ const MobileNavigation = () => {
           </div>
           <div
             className={`overflow-visible p-[15px] inline-block cursor-pointer transition-opacity border-none hover:opacity-[0.7]
-              ${navbarExpanded ? "hidden" : ""}\
+              ${navbarExpanded ? "self-end justify-self-end" : ""}\
             `}
           >
             <div
@@ -70,7 +70,13 @@ const MobileNavigation = () => {
               <div
                 className={`block top-[50%] mt-[-2px] w-[40px] h-[4px] bg-[white] rounded absolute 
                 before:content-[''] before:block before:top-[-10px] before:w-[40px] before:h-[4px] before:bg-[white] before:rounded before:absolute
-                after:content-[''] after:block after:bottom-[-10px] after:w-[40px] after:h-[4px] after:bg-[white] after:rounded after:absolute`}
+                after:content-[''] after:block after:bottom-[-10px] after:w-[40px] after:h-[4px] after:bg-[white] after:rounded after:absolute
+                ${
+                  navbarExpanded
+                    ? "bottom-0 transition-all rotate-[-45deg] right-[0] flex justify-self-end self-end" +
+                      "after:top-[0] after:transition-all after:opacity-0 before:transition-all before:rotate-[-90deg] before:top-[0]"
+                    : ""
+                }`}
               />
             </div>
           </div>

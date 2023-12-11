@@ -1,15 +1,47 @@
 "use client";
 import { Socials } from "@/constants";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MobileNavigation from "@/app/components/sub/MobileNavigation";
 import DesktopNavigation from "@/app/components/sub/DesktopNavigation";
 import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 
 const Navbar = () => {
-  const navbarExpanded = useAppSelector((store) => store.navbar.expanded);
+  const [windowSize, setWindowsSize] = useState<{
+    width?: number;
+    height?: number;
+  }>({
+    width: undefined,
+    height: undefined,
+  });
 
-  return <MobileNavigation></MobileNavigation>;
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowsSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+      window.addEventListener("resize", handleResize);
+
+      handleResize();
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  return (
+    <>
+      {(() => {
+        if (typeof windowSize !== "undefined") {
+          if (windowSize.width <= 700) {
+            return <MobileNavigation />;
+          } else return <DesktopNavigation />;
+        }
+      })()}
+    </>
+  );
 };
 
 // height was 65px

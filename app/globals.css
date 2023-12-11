@@ -67,3 +67,9 @@
 html {
     scroll-behavior: smooth;
 }
+
+@layer utilities {
+    .translate3d{
+        transform: translate3d(0, -10px, 0);
+    }
+}
