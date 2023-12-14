@@ -26,7 +26,7 @@ const Contact = () => {
     }
   };
 
-  const onSubmit = async (e: ChangeEvent<HTMLInputElement>): Promise<void> => {
+  const onSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     await fetch(FORMSPARK_ACTION_URL, {
       method: "POST",
@@ -51,13 +51,17 @@ const Contact = () => {
           className="flex flex-col gap-8 items-center w-[50%]"
         >
           <div>
-            <input id="name" value={name} onChange={(e) => setInput(e)} />
+            <input
+              id="name"
+              value={name}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e)}
+            />
           </div>
           <div>
             <input
               id="contactMail"
               value={contactMail}
-              onChange={(e) => setInput(e)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e)}
             />
           </div>
           <div className="relative mb-6">
@@ -76,7 +80,7 @@ const Contact = () => {
               id="projectBudget"
               step="50"
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-              onChange={(e) => {
+              onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 setInput(e);
               }}
             />
