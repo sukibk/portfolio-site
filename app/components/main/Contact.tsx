@@ -11,19 +11,19 @@ const Contact = () => {
 
   const setInput = (e) => {
     console.log(e.target.id);
-    switch (e.target.id) {
-      case "name":
-        setName((prevName) => e.target.value);
-        break;
-      case "contactMail":
-        setContactMail((prevMail) => e.target.value);
-        break;
-      case "projectBudget":
-        setProjectBudget((prevProjectSize) => e.target.value);
-        break;
-      default:
-        return;
-    }
+    // switch (e.target.id) {
+    //   case "name":
+    //     setName((prevName) => e.target.value);
+    //     break;
+    //   case "contactMail":
+    //     setContactMail((prevMail) => e.target.value);
+    //     break;
+    //   case "projectBudget":
+    //     setProjectBudget((prevProjectSize) => e.target.value);
+    //     break;
+    //   default:
+    //     return;
+    // }
   };
 
   const onSubmit = async (e) => {
@@ -54,7 +54,11 @@ const Contact = () => {
             <input id="name" value={name} onChange={(e) => setInput(e)} />
           </div>
           <div>
-            <input id="contactMail" value={contactMail} />
+            <input
+              id="contactMail"
+              value={contactMail}
+              onChange={(e) => setInput(e)}
+            />
           </div>
           <div className="relative mb-6">
             <label
@@ -72,6 +76,9 @@ const Contact = () => {
               id="projectBudget"
               step="50"
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+              onChange={(e) => {
+                setInput(e);
+              }}
             />
             <input
               type="text"
