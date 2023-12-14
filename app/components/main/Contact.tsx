@@ -6,7 +6,7 @@ const FORMSPARK_ACTION_URL = "https://submit-form.com/rCRzIXymy";
 const Contact = () => {
   const [name, setName] = useState("");
   const [contactMail, setContactMail] = useState("");
-  const [projectBudget, setProjectBudget] = useState("");
+  const [projectBudget, setProjectBudget] = useState("800");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const setInput = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -19,12 +19,16 @@ const Contact = () => {
         setContactMail((prevMail) => e.target.value);
         break;
       case "projectBudget":
-        setProjectBudget((prevProjectSize) => e.target.value);
+        setProjectBudget((prevProjectBudget) => e.target.value);
         break;
       default:
         return;
     }
   };
+
+  if (projectBudget === "15000") {
+    setProjectBudget((prevProjectBudget) => "15000+");
+  }
 
   const onSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -87,12 +91,11 @@ const Contact = () => {
             />
             <input
               type="text"
-              value={projectBudget}
-              placeholder="800"
+              value={`$${projectBudget}`}
               id="projectBudgetValue"
               readOnly={true}
               disabled={true}
-              className="bg-white bg-opacity-5 rounded-lg shadow-lg border-2 border-[#2A0E61] text-white p-[1vh]"
+              className="bg-white bg-opacity-5 placeholder:text-white  rounded-lg shadow-lg border-2 border-[#2A0E61] text-white p-[1vh]"
             />
           </div>
           <div>

@@ -12,8 +12,8 @@ const Projects = () => {
           src="/black_lake_retreat.png"
           title="Web Site For Wedding Venue"
           description="Black Lake Retreat Center is small business in Asheboro, North Carolina. In collaboration with other
-          developer I have built web site from ground up and integrated application for online reservation. We used low
-          -code platform - Weebly, as well as low-code forms application Jotform"
+          developer I have built web site from ground up and integrated application for online reservation. We used low code
+          platform Weebly, as well as low code forms framework Jotform"
         />
         <ProjectCard
           src="/CardImage.png"
