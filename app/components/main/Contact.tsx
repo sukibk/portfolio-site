@@ -54,11 +54,7 @@ const Contact = () => {
             <input id="name" value={name} onChange={(e) => setInput(e)} />
           </div>
           <div>
-            <input
-              id="contactMail"
-              value={contactMail}
-              onChange={(e) => setInput(e)}
-            />
+            <input id="contactMail" value={contactMail} />
           </div>
           <div className="relative mb-6">
             <label
@@ -76,9 +72,6 @@ const Contact = () => {
               id="projectBudget"
               step="50"
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-              onChange={(e) => {
-                setInput(e);
-              }}
             />
             <input
               type="text"
