@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 
 const FORMSPARK_ACTION_URL = "https://submit-form.com/rCRzIXymy";
 
@@ -26,7 +26,7 @@ const Contact = () => {
     }
   };
 
-  const onSubmit = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onSubmit = async (e: ChangeEvent<HTMLInputElement>): Promise<void> => {
     e.preventDefault();
     await fetch(FORMSPARK_ACTION_URL, {
       method: "POST",
