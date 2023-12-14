@@ -55,6 +55,7 @@ const Contact = () => {
               id="name"
               value={name}
               onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e)}
+              className="bg-white bg-opacity-5 rounded-lg shadow-lg border-2 border-[#2A0E61] text-white p-[1vh] focus:outline-violet-600 focus:outline-none focus:outline-offset-0"
             />
           </div>
           <div>
@@ -62,6 +63,7 @@ const Contact = () => {
               id="contactMail"
               value={contactMail}
               onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e)}
+              className="bg-white bg-opacity-5 rounded-lg shadow-lg border-2 border-[#2A0E61] text-white p-[1vh] focus:outline-violet-600 focus:outline-none focus:outline-offset-0"
             />
           </div>
           <div className="relative mb-6">
@@ -69,7 +71,7 @@ const Contact = () => {
               htmlFor="steps-range"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Range steps
+              Project Budget
             </label>
             <input
               type="range"
@@ -88,12 +90,15 @@ const Contact = () => {
               value={projectBudget}
               placeholder="800"
               id="projectBudgetValue"
+              readOnly={true}
+              disabled={true}
+              className="bg-white bg-opacity-5 rounded-lg shadow-lg border-2 border-[#2A0E61] text-white p-[1vh]"
             />
           </div>
           <div>
             <textarea
               id="projectDescription"
-              className="w-[70vw] h-[40vh]"
+              className="w-[70vw] h-[40vh] bg-white bg-opacity-5 rounded-lg shadow-lg border-2 border-[#2A0E61] text-white p-[1vh] focus:outline-violet-600 focus:outline-none focus:outline-offset-0"
               rows={10}
               cols={50}
             />
