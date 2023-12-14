@@ -72,7 +72,6 @@ const Contact = () => {
               Range steps
             </label>
             <input
-              id="steps-range"
               type="range"
               min="500"
               max="15000"
