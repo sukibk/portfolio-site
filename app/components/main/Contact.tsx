@@ -26,7 +26,7 @@ const Contact = () => {
     }
   };
 
-  const onSubmit = async (e: React.ChangeEvent<any>) => {
+  const onSubmit = async (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     await fetch(FORMSPARK_ACTION_URL, {
       method: "POST",
