@@ -9,7 +9,7 @@ const Contact = () => {
   const [projectBudget, setProjectBudget] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const setInput = (e) => {
+  const setInput = (e: ChangeEvent<HTMLInputElement>): void => {
     console.log(e.target.id);
     switch (e.target.id) {
       case "name":
