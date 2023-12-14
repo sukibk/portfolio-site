@@ -24,7 +24,7 @@ const itemVariants: Variants = {
 const MobileNavigation = () => {
   const navbarExpanded = useAppSelector((store) => store.navbar.expanded);
   const dispatch = useAppDispatch();
-  const toggleNavbar = () => {
+  const handleResize = () => {
     //@ts-ignore
     dispatch(toggle());
   };
@@ -79,7 +79,7 @@ const MobileNavigation = () => {
           >
             <div
               className={"w-[40px] h-[40px] inline-block relative"}
-              onClick={toggleNavbar}
+              onClick={handleResize}
             >
               <div
                 className={`block top-[50%] mt-[-2px] w-[40px] h-[4px] bg-[white] rounded absolute 
@@ -132,6 +132,7 @@ const MobileNavigation = () => {
                   <a
                     href="#technologies"
                     className="cursor-pointer transition-all duration-[0.4s] hover:text-[50px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
+                    onClick={handleResize}
                   >
                     Technologies
                   </a>
@@ -140,6 +141,7 @@ const MobileNavigation = () => {
                   <a
                     href="#about-me"
                     className="cursor-pointer transition-all duration-[0.4s] hover:text-[50px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
+                    onClick={handleResize}
                   >
                     About me
                   </a>
@@ -148,6 +150,7 @@ const MobileNavigation = () => {
                   <a
                     href="#projects"
                     className="cursor-pointer transition-all duration-[0.4s] hover:text-[50px] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-500"
+                    onClick={handleResize}
                   >
                     Projects
                   </a>
